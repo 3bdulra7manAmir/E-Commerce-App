@@ -1,39 +1,78 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:taskn3/pages/register.dart';
 
-import '../shared/custom_textfield.dart';
+import '../shared/colors.dart';
+import '../shared/constanats.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Padding(
-          //padding of all sides
-          padding: const EdgeInsets.all(33.0), //padding value of all edges
-          child: Column(
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              const SizedBox(
-                //to push the textfield of the top of the screen
-                height: 64,
-              ),
-              MyTextField(
-                textInputTypee: TextInputType.emailAddress,
-                isPassword: false,
-                hinttextt: "Enter Your Email : ",
-              ),
-
-              const SizedBox(
-                height: 64,
-              ), //to push the textfield of the top of the screen
-
-              MyTextField(
-                textInputTypee: TextInputType.text,
-                isPassword: true,
-                hinttextt: "Enter Your Password : ",),
-            ], //Text in!
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color.fromARGB(255, 247, 247, 247),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(33.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  height: 64,
+                ),
+                TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    obscureText: false,
+                    decoration: con.copyWith(hintText: "Enter Your Email")),
+                const SizedBox(
+                  height: 33,
+                ),
+                TextField(
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                    decoration: con.copyWith(hintText: "Enter Your Password")),
+                const SizedBox(
+                  height: 64,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(BTNgreen),
+                    padding: MaterialStateProperty.all(EdgeInsets.all(12)),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8))),
+                  ),
+                  child: Text(
+                    "Sign In",
+                    style: TextStyle(fontSize: 19),
+                  ),
+                ),
+                const SizedBox(
+                  height: 33,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Do not have an account",
+                        style: TextStyle(fontSize: 18)),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Register()));
+                        },
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(color: Colors.black, fontSize: 18),
+                        ))
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
