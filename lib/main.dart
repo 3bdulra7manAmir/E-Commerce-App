@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget
   {
     return const MaterialApp
     (
-      home: TempName(), //Temp name untill we create our Main Page or in this case or Login Page
+      home: TempName(), //Temp name untill we create our MainPage or in this case or Login Page
     );
   }
 }
