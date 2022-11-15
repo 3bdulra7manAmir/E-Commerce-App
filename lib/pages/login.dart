@@ -11,10 +11,7 @@ class Login extends StatelessWidget
     (
       body: Column
       (
-        children:
-        [
-          Text("data"),
-        ],
+        children: const [Text("data")], //Text in!
       ),
     );
   }
