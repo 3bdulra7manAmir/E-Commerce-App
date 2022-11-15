@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget
     return const MaterialApp
     (
       home: Login(), //Temp name untill we create our MainPage or in this case or Login Page
+      debugShowCheckedModeBanner: false,
     );
   }
 }
