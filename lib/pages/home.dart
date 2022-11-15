@@ -67,18 +67,18 @@ class Home extends StatelessWidget {
                 const UserAccountsDrawerHeader(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/back.jpg"),
+                        image: AssetImage("assets/images/Back.jpg"),
                         fit: BoxFit.cover),
                   ),
-                  accountName: Text("Abdulrahman Khalifa",
+                  accountName: Text("Shadow",
                       style: TextStyle(
                         color: Color.fromARGB(255, 255, 255, 255),
                       )),
-                  accountEmail: Text("Abdo@gmail.com"),
+                  accountEmail: Text("ShadowCompany@gmail.com"),
                   currentAccountPictureSize: Size.square(90),
                   currentAccountPicture: CircleAvatar(
                       radius: 55,
-                      backgroundImage: AssetImage("assets/images/me.jpeg")),
+                      backgroundImage: AssetImage("assets/images/1.jpeg")),
                 ),
                 ListTile(
                     title: const Text("Home"),
@@ -114,7 +114,7 @@ class Home extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(bottom: 12),
-              child: const Text("Developed by Abdo Khalifa © 2022",
+              child: const Text("Shadow company",
                   style: TextStyle(fontSize: 16)),
             ),
           ],
