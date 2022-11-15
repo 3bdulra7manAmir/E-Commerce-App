@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskn3/pages/login.dart';
 
 void main()
 {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget
   {
     return const MaterialApp
     (
-      home: TempName(), //Temp name untill we create our MainPage or in this case or Login Page
+      home: Login(), //Temp name untill we create our MainPage or in this case or Login Page
     );
   }
 }
