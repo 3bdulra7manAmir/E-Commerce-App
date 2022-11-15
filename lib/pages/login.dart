@@ -47,7 +47,7 @@ class Login extends StatelessWidget {
                       .emailAddress, //keyboard type either email or password or date etc
                   obscureText: true, //**** stars password
                   decoration: InputDecoration(
-                    hintText: "Enter Your Email : ",
+                    hintText: "Enter Your Password : ",
 // To delete borders
                     enabledBorder: OutlineInputBorder(
                       borderSide: Divider.createBorderSide(context),
