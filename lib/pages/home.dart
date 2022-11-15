@@ -124,7 +124,7 @@ class Home extends StatelessWidget {
         backgroundColor: appbarGreen,
         title: const Text("Home"),
         actions: const [ProductsAndPrice()],
-      ),
+      ), 
     );
   }
 }
