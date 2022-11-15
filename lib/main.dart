@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:taskn3/pages/register.dart';
+import 'package:taskn3/pages/details_screen.dart';
+import 'package:taskn3/pages/home.dart';
+import 'package:provider/provider.dart';
+import 'pages/checkout.dart';
+import 'pages/login.dart';
+import 'pages/register.dart';
+import 'provider/cart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,12 +14,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home:
-          Register(), //Temp name untill we create our MainPage or in this case or Login Page
-      debugShowCheckedModeBanner: false,
+    return ChangeNotifierProvider(
+      create: (context) {
+        return Cart();
+      },
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Home(),
+      ),
     );
   }
 }
