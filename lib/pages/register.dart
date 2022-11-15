@@ -73,7 +73,7 @@ class Register extends StatelessWidget {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Login()));
+                                    builder: (context) => Register()));
                           },
                           child: Text(
                             'Sign In',
